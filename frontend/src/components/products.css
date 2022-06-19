@@ -1,0 +1,21 @@
+.card_card {
+    width: 300px;
+    box-shadow: 10px 10px 10px black;
+}
+.card_card:hover {
+    width: 300px;
+    box-shadow: 10px 10px 10px lightcyan;
+
+}
+.review_container {
+    height: 500px;
+ 
+}
+#product_image_card{
+    max-width: 300px;
+    max-height: 300px;
+}
+.review_carousel {
+    height: 500px;
+    margin-bottom: 2px;
+}
