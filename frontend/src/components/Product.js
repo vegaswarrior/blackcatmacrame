@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import {Card, Row} from "react-bootstrap";
+import {Card, Row, Button} from "react-bootstrap";
 import Rating from "./Rating";
 import ProductCarousel from "./ProductCarousel";
 import "./products.css";
@@ -18,7 +18,10 @@ const Product = ({product}) => {
 				<Card.Body>
 					<Link to={`/product/${product._id}`}>
 						<Card.Title as="div">
-							<strong>{product.name}</strong>
+						 <Button className="product_button">
+						      <strong>{product.name}</strong> 
+						 </Button>
+							
 						</Card.Title>
 					</Link>
 
@@ -26,7 +29,7 @@ const Product = ({product}) => {
 						<Rating value={product.rating} text={`${product.numReviews} reviews`} />
 					</Card.Text>
 
-					<Card.Text as="h3">${product.price}</Card.Text>
+					<Card.Text as="h3" className="card_money">${product.price}</Card.Text>
 				</Card.Body>
 			</Card>
 		</Row>

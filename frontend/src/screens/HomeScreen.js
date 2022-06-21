@@ -7,7 +7,7 @@ import Product from "../components/Product";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import Paginate from "../components/Paginate";
-import Reviews from "../components/Reviews";
+import Testimonials from "../components/Testimonials";
 import Meta from "../components/Meta";
 import {listProducts} from "../actions/productActions";
 import "./homescreen.css";
@@ -68,7 +68,7 @@ const HomeScreen = ({match}) => {
 					)}
 			
 			</Container>
-			<Reviews />
+			<Testimonials />
 		</>
 	);
 };

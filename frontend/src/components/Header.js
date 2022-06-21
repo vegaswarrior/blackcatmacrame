@@ -36,8 +36,8 @@ const Header = () => {
 						<LinkContainer to="/">
 							<Navbar.Brand className="jumboH2 text-info">Home</Navbar.Brand>
 						</LinkContainer>
-						<LinkContainer to="/about">
-							<Navbar.Brand className="jumboH2 text-info">About Me</Navbar.Brand>
+						<LinkContainer to="/story">
+							<Navbar.Brand className="jumboH2 text-info">My Story</Navbar.Brand>
 						</LinkContainer>
 						<LinkContainer to="/collections">
 							<Navbar.Brand className="jumboH2 text-info">Collections</Navbar.Brand>

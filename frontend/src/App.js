@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import HomeScreen from './screens/HomeScreen'
-// import HomeScreen2 from './screens/HomeScreen2'
+
 import ProductScreen from './screens/ProductScreen'
 import CartScreen from './screens/CartScreen'
 import LoginScreen from './screens/LoginScreen'
@@ -19,12 +19,23 @@ import UserEditScreen from './screens/UserEditScreen'
 import ProductListScreen from './screens/ProductListScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
-import About from './components/About'
+import Story from './components/Story'
 import Collections from './components/Collections'
 import Contact from './components/Contact'
-// import { Collection } from 'mongoose'
+
 
 const App = () => {
+
+  const [resumeData, setResumeData] = useState({});
+
+  useEffect(() => {
+    fetch("/resumeData.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setResumeData(data);
+      });
+  }, []);
+
   return (
     <Router>
       <Header />
@@ -41,7 +52,7 @@ const App = () => {
           <Route path='/cart/:id?' component={CartScreen} />
           <Route path='/admin/userlist' component={UserListScreen} />
           <Route path='/admin/user/:id/edit' component={UserEditScreen} />
-          <Route path='/about' component={About} />
+          <Route path='/story' component={Story} />
           <Route path='/collections' component={Collections} />
           <Route path='/contact' component={Contact} />
           <Route
@@ -65,7 +76,7 @@ const App = () => {
           />
            </Container>
           <Route path='/' component={HomeScreen} exact />
-          {/* <Route path='/' component={HomeScreen2} exact /> */}
+        
        
       </main>
       <Footer />

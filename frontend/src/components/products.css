@@ -1,6 +1,7 @@
 .card_card {
     width: 300px;
     box-shadow: 10px 10px 10px black;
+    margin: 10px;
 }
 .card_card:hover {
     width: 300px;
@@ -18,4 +19,21 @@
 .review_carousel {
     height: 500px;
     margin-bottom: 2px;
+}
+.product_button {
+    color: black;
+    background-color: transparent;
+    border: none
+;
+}
+.product_button:hover {
+    border: 1px solid darkgrey;
+    box-shadow: 4x 4px 2px darkgrey;
+    background-color: blue;
+}
+
+.card_money {
+    justify-content: center;
+    color: green;
+    
 }
