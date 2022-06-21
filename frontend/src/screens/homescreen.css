@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Great+Vibes&display=swap');
 
@@ -7,12 +6,9 @@
  background-color: rgb(0, 0, 0);
 }
 .main {
-    
     height: 600px;
     border-bottom: 1px solid black;
     margin-bottom: 10%;
-  
-    
   }
   .first_button{
     align-self: center;
@@ -20,19 +16,15 @@
     height: 50px;
     width: 250px;
   }
-
   .jumboH1 {
     font-family: 'Birthstone', cursive;
     font-size: 75px;
     margin-top: 3%;
-
   }
   .jumboH2 {
     font-family: 'Birthstone', cursive;
     font-size: 35px;
-    
   }
- 
   .cat_col {
     height: 300px;
   }
@@ -41,6 +33,76 @@
   }
   .cat_image {
     height: 300px;
+  }
+  .footer_container {
+    height: 300px;
+    background-color: #000;
+  }
+  .featured_products_container {
+      display: flex;
+      background-color: blue;
+      flex-direction: column;   
+      background-image: url("../../public/images/product1.jpeg");
+      background-color: #cccccc; 
+    
+      background-position: center; 
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .product_row {
+   align-self: center;
+  }
+  .product_div {
+   justify-content: center;
+   align-self: center;
+  }
+  /* ABOUT ME  */
+  .about_image_div {
+    height: 400px;
+    width: 400px;
+  }
+/* CONTACT */
+.contact_background_image {
+  background-image: url("../components/images/contact-me.jpeg");
+  background-color: #cccccc; 
+  height: 500px;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+.form_container {
+  border: 1px solid darkgrey;
+  background-color: grey;
+  color: white;
+  height: 500px;
+}
+.left_side_div {
+  border-right: 1px solid white;
+  height: 500px;
+  width: 300px;
+}
+  @media only screen and (max-width: 500px){
+    .product_row{   
+      align-self: center;
+      margin-left: 40%;
+    }
+  }
+  @media only screen and (max-width: 500px){
+    .product_div{
+      margin-left: 20%;
+      max-width: 300px;
+    }
+  }
+  @media only screen and (max-width: 500px){
+    .card_card{
+    width: 400px
+    }
+  }
+  @media only screen and (width:934px) {
+    .cat_image {
+      width: 175px;
+      height: 175px
+    }
   }
   @media only screen and (width:650px) {
     .cat_image {
@@ -54,85 +116,37 @@
       height: 100px
     }
   }
-
- 
-  .footer_container {
-    height: 300px;
-    background-color: #000;
-  }
-
-  .featured_products_container {
-    display: flex;
-    background-color: blue;
-    flex-direction: column;
-     
-      background-image: url("../../public/images/product1.jpeg");
-      background-color: #cccccc; /* Used if the image is unavailable */
-      /* height: 800px;  */
-      background-position: center; /* Center the image */
-      background-repeat: no-repeat; /* Do not repeat the image */
-      background-size: cover; /* Resize the background image to cover the entire container */
-    
-  }
-  .product_row {
-   align-self: center;
-  
-  }
-  .product_div {
-   justify-content: center;
-   align-self: center;
-  }
-
-  /* ABOUT ME  */
-  .about_image_div {
-    height: 400px;
-    width: 400px;
-  }
-
-/* CONTACT */
-.contact_background_image {
-  background-image: url("../components/images/contact-me.jpeg");
-  background-color: #cccccc; 
-  height: 500px;
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: cover;
-}
-
-.form_container {
-  border: 1px solid darkgrey;
-  background-color: grey;
-  color: white;
-  height: 500px;
-
-}
-
-.left_side_div {
-  border-right: 1px solid white;
-  height: 500px;
-  width: 300px;
-}
-
-
-
-  @media only screen and (max-width: 500px){
-    .product_row{
-    
-      align-self: center;
-      margin-left: 40%;
+  @media only screen and (max-width: 500px) {
+    .jumboH2{
+      font-size: 20px;
     }
   }
-  @media only screen and (max-width: 500px){
-    .product_div{
-      
-      margin-left: 20%;
-      max-width: 300px;
-      
+  @media only screen and (max-width: 750px) {
+    .jumboH2{
+      font-size: 20px;
     }
   }
-  @media only screen and (max-width: 500px){
-    .card_card{
-    width: 400px
-      
+  @media only screen and (max-width: 750px) {
+    .jumboH1 {
+      font-size: 50px;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .jumboH1 {
+      font-size: 30px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .main {
+      height: 500px;
+      border-bottom: 1px solid black;
+      margin-bottom: 10%;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .main {
+      height: 400px;
+      border-bottom: 1px solid black;
+      margin-bottom: 10%;
     }
   }
