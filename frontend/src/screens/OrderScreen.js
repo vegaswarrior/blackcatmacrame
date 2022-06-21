@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import {PayPalButton} from "react-paypal-button-v2";
 import {Link} from "react-router-dom";
 import {Row, Col, ListGroup, Image, Card, Button} from "react-bootstrap";
 import {useDispatch, useSelector} from "react-redux";
@@ -8,6 +7,12 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import {getOrderDetails, payOrder, deliverOrder} from "../actions/orderActions";
 import {ORDER_PAY_RESET, ORDER_DELIVER_RESET} from "../constants/orderConstants";
+import STRIPE_PUBLIC_KEY from "../constants/stripePublicKey";
+import {loadStripe} from "@stripe/stripe-js";
+import {Elements} from "@stripe/react-stripe-js";
+import CheckoutForm from "../components/ChechoutForm";
+
+const stripePromise = loadStripe(STRIPE_PUBLIC_KEY);
 
 const OrderScreen = ({match, history}) => {
 	const [clientSecret, setClientSecret] = useState("");
@@ -73,12 +78,19 @@ const OrderScreen = ({match, history}) => {
 			axios
 				.post("/api/orders/create-payment-intent", orderItems, config)
 				.then((res) => {
-					console.log(res.data.clientSecret);
 					setClientSecret(res.data.clientSecret);
 				})
 				.catch((err) => console.log(err));
 		}
 	}, [orderDetails, userInfo]);
+
+	const appearance = {
+		theme: "stripe"
+	};
+	const options = {
+		clientSecret,
+		appearance
+	};
 
 	const successPaymentHandler = (paymentResult) => {
 		console.log(paymentResult);
@@ -192,7 +204,13 @@ const OrderScreen = ({match, history}) => {
 							{!order.isPaid && (
 								<ListGroup.Item>
 									{loadingPay && <Loader />}
-									{!clientSecret ? <Loader /> : <h1>Stripe</h1>}
+									{!clientSecret ? (
+										<Loader />
+									) : (
+										<Elements options={options} stripe={stripePromise}>
+											<CheckoutForm successPaymentHandler={successPaymentHandler} />
+										</Elements>
+									)}
 								</ListGroup.Item>
 							)}
 							{loadingDeliver && <Loader />}
