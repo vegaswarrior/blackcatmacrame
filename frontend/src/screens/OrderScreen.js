@@ -53,14 +53,12 @@ const OrderScreen = ({match, history}) => {
 			dispatch({type: ORDER_PAY_RESET});
 			dispatch({type: ORDER_DELIVER_RESET});
 			dispatch(getOrderDetails(orderId));
-		} else if (!order.isPaid) {
-			//
 		}
 	}, [dispatch, orderId, successPay, successDeliver, order, history, userInfo]);
 
 	//get user secret
 	useEffect(() => {
-		if (!orderDetails.loading) {
+		if (!orderDetails.loading && !order.isPaid) {
 			const orderItems = {
 				items: orderDetails.order.orderItems.map((item) => ({
 					_id: item.product,
@@ -82,7 +80,7 @@ const OrderScreen = ({match, history}) => {
 				})
 				.catch((err) => console.log(err));
 		}
-	}, [orderDetails, userInfo]);
+	}, [orderDetails, userInfo, order]);
 
 	const appearance = {
 		theme: "stripe"
@@ -93,7 +91,6 @@ const OrderScreen = ({match, history}) => {
 	};
 
 	const successPaymentHandler = (paymentResult) => {
-		console.log(paymentResult);
 		dispatch(payOrder(orderId, paymentResult));
 	};
 
@@ -208,7 +205,10 @@ const OrderScreen = ({match, history}) => {
 										<Loader />
 									) : (
 										<Elements options={options} stripe={stripePromise}>
-											<CheckoutForm successPaymentHandler={successPaymentHandler} />
+											<CheckoutForm
+												successPaymentHandler={successPaymentHandler}
+												userEmail={userInfo.email}
+											/>
 										</Elements>
 									)}
 								</ListGroup.Item>

@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {PaymentElement, useStripe, useElements} from "@stripe/react-stripe-js";
-import {Button} from "react-bootstrap";
 
-export default function CheckoutForm({successPaymentHandler}) {
+export default function CheckoutForm({successPaymentHandler, userEmail}) {
 	const stripe = useStripe();
 	const elements = useElements();
 
@@ -54,33 +53,33 @@ export default function CheckoutForm({successPaymentHandler}) {
 		const res = await stripe.confirmPayment({
 			elements,
 			confirmParams: {
-				// Make sure to change this to your payment completion page
 				return_url:
 					window.location.protocol +
 					"//" +
 					window.location.host +
 					"/" +
 					window.location.pathname +
-					window.location.search
-			}
+					window.location.search,
+				receipt_email: userEmail
+			},
+			redirect: "if_required"
 		});
 
 		if (res.paymentIntent) {
-			console.log("okkkkkkkk");
-			//change res.paymentIntent in function
-			// order.paymentResult = {
-			//     id: req.body.id,
-			//     status: req.body.status,
-			//     update_time: req.body.update_time,
-			//     email_address: req.body.payer.email_address
-			// };
-			successPaymentHandler(res.paymentIntent);
-		}
-
-		if (res.error.type === "card_error" || res.error.type === "validation_error") {
-			setMessage(res.error.message);
+			const paymentIntent = res.paymentIntent;
+			const paymentResult = {
+				id: paymentIntent.id,
+				status: paymentIntent.status,
+				update_time: paymentIntent.created,
+				email_address: paymentIntent.receipt_email
+			};
+			successPaymentHandler(paymentResult);
 		} else {
-			setMessage("An unexpected error occurred.");
+			if (res.error.type === "card_error" || res.error.type === "validation_error") {
+				setMessage(res.error.message);
+			} else {
+				setMessage("An unexpected error occurred.");
+			}
 		}
 
 		setIsLoading(false);
@@ -92,10 +91,16 @@ export default function CheckoutForm({successPaymentHandler}) {
 			<button
 				disabled={isLoading || !stripe || !elements}
 				id="submit"
-				className="mt-2 tbn btn-primary"
+				className="btn btn-primary mt-2"
 			>
 				<span id="button-text">
-					{isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
+					{isLoading ? (
+						<div className="spinner-border text-light" role="status">
+							<span className="visually-hidden">Loading...</span>
+						</div>
+					) : (
+						"Pay now"
+					)}
 				</span>
 			</button>
 			{/* Show any error or success messages */}
