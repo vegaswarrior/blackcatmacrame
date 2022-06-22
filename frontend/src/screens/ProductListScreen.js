@@ -103,8 +103,12 @@ const ProductListScreen = ({history, match}) => {
 						<tbody>
 							{products.map((product) => (
 								<tr key={product._id}>
-									<td style={{width: "400px"}}>
-										<ProductCarousel imagesArr={product.images} alt={product.name} />
+									<td>
+										<ProductCarousel
+											imagesArr={product.images}
+											alt={product.name}
+											size={["200px", "200px"]}
+										/>
 									</td>
 									<td>{product.name}</td>
 									<td>${product.price}</td>
