@@ -43,9 +43,9 @@ const Header = () => {
 						<LinkContainer to="/story">
 							<Navbar.Brand className="jumboH2 text-info">My Story</Navbar.Brand>
 						</LinkContainer>
-						<LinkContainer to="/collections">
+						{/* <LinkContainer to="/collections">
 							<Navbar.Brand className="jumboH2 text-info">Collections</Navbar.Brand>
-						</LinkContainer>
+						</LinkContainer> */}
 						<LinkContainer to="/contact">
 							<Navbar.Brand className="jumboH2 text-info">Contact Me</Navbar.Brand>
 						</LinkContainer>

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima&display=swap');
+
 .Product_card{
     box-shadow: 10px 10px 10px pink;
 }
@@ -72,32 +76,80 @@
     font-size: 16px;
     font-family: "Helvetica";
     text-decoration: none;
-    margin: 30px 0;
+    /* margin: 30px 0; */
     border: 2px solid pink;
-    padding: 18px 70px;
+    /* padding: 18px 70px; */
     overflow: hidden;
     transition: 1s all ease;
     z-index: 2
 }
 .Product_card:before{
-    background: purple;
+    background: rgb(221, 10, 221);
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: -1;
-    transition: all 0.6s ease;
+    transition: all 1s ease;
     width: 100%;
     height: 0%;
     transform: translate(-50%,-50%) rotate(-45deg);
       }
 .Product_card:hover {
     text-decoration: none;
+    border: blueviolet;
     cursor: pointer;
+    background-color: #81c9e49d;
     color: white;
 
 }
 .Product_card:hover::before{
-height: 380%;
+    height: 380%;
 }
+.jumboH3 {
+    font-family: 'Birthstone', cursive;
+    font-size: 60px;
+    margin-top: 3%;
+    animation-name: moveInleft;
+    animation-duration: 2s;
+
+  }
+.jumboH4 {
+    font-family: 'Birthstone', cursive;
+    font-size: 60px;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+  }
+  .testPara {
+    font-size: 20px;
+    color: black;
+    font-family: 'Arima', cursive;
+  }
+  @keyframes moveInleft {
+    0% {
+     opacity: 0;
+     transform: translateX(-100px);
+    }
+    80% {
+     transform: translateX(20px);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+ }
+ @keyframes moveInRight {
+    0% {
+     opacity: 0;
+     transform: translateX(100px);
+    }
+    80% {
+     transform: translateX(-10px);
+    }
+ 
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+ }

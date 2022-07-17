@@ -31,7 +31,7 @@ const HomeScreen = ({match}) => {
 				<h1 className="text-center jumboH1 text-info">Welcome To Black Cat Macrame</h1>
 				<h4 className="text-center jumboH2">
 					Designing Beautiful Handmade Macrame Jewelry.
-				</h4>{" "}
+				</h4>
 				<br />
 				<Button id="first_button" href="/collections">
 					Discover More
