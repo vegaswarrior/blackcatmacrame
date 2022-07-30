@@ -113,7 +113,7 @@
       display: flex;
       background-color: blue;
       flex-direction: column;   
-      background-image: url("../../public/images/product1.jpeg");
+      background-image: url("./product1.jpeg");
       background-color: #cccccc; 
     
       background-position: center; 

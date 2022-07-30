@@ -8,8 +8,26 @@
 .Product_card:hover{
     box-shadow: 5px 5px 5px darkorchid;
 }
-.review_container {
+/* .review_container {
     height: 500px;
+} */
+.copyRight {
+    background-color: black;
+    color: #fff;
+}
+.footerButtons {
+    background-color: black;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: none;
+    color: rgb(10, 210, 236);
+}
+.footer-icons{
+    color: rgb(22, 193, 223);
+    border: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 #product_image_card{
     max-width: 300px;
