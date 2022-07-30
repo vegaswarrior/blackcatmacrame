@@ -43,12 +43,26 @@ const Header = () => {
 						<LinkContainer to="/story">
 							<Navbar.Brand className="jumboH2 text-info">My Story</Navbar.Brand>
 						</LinkContainer>
-						{/* <LinkContainer to="/collections">
+						<LinkContainer to="/collections">
 							<Navbar.Brand className="jumboH2 text-info">Collections</Navbar.Brand>
-						</LinkContainer> */}
+						</LinkContainer>
 						<LinkContainer to="/contact">
 							<Navbar.Brand className="jumboH2 text-info">Contact Me</Navbar.Brand>
 						</LinkContainer>
+						{/* <ul className='list-unstyled d-inline'>
+									<li className="d-inline">
+										<a href="https://www.facebook.com/MacrameBlackCat"><i className="fa-brands fa-facebook footer-icons"></i></a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/macrameblackcat/?fbclid=IwAR0vuZkalF3G0wG7Mr4G2GlLZSHpwUxf_ZMAIFZ8op5ApSLYCU76R8qWNfU"><i className="fa-brands fa-instagram footer-icons"></i></a>
+									</li>
+									<li>
+										<a href="https://www.etsy.com/shop/MacrameBlackCat?fbclid=IwAR1A5vjBmlsHJOoa8k1dC6WVWdSjjd6Q9c-8mJxZRn4gMajTdp7ahSZBKjI"><i className="fa-brands fa-etsy footer-icons"></i></a>
+									</li>
+									<li>
+										<a href="https://www.facebook.com"><i className="fa-brands fa-pinterest footer-icons"></i></a>
+									</li>
+						</ul> */}
 						<Nav className="ml-auto">
 							<LinkContainer to="/cart">
 								<Nav.Link>

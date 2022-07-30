@@ -40,13 +40,7 @@ const Footer = () => {
               <li>
                   <a href="https://www.facebook.com"><i className="fa-brands fa-pinterest footer-icons"></i></a>
               </li>
-
-
-
-
             </ul>
-        
-
           </Col>
           <Col className='text-center py-3 text-info '>            
             
