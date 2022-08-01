@@ -1,60 +1,66 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-import jenny from '../components/images/jenny1.jpg'
+import { Container, Row, Col, Button } from 'react-bootstrap'
+import jenny from '../components/images/gennyAbout.jpg'
+import heart_image from '../components/images/redHeart1.png'
+import black_heart from '../components/images/blackheart.png'
 import jenny2 from '../components/images/jenny2.jpg'
 import "./products.css";
 
 function Story() {
   return (
-    <Container>
-      <Row>
-        <Col>
-           <div><img className='about_image_div'src={jenny}></img></div>
-           <div><img className='about_image_div_2'src={jenny2}></img></div>
-        </Col>
-        <Col>
-           <h1>My Story</h1>
-           <p className='text-indent'>Hi and welcome to Macrame Black Cat Handmade Artisan Jewelry.
-            My Name is Genny and my Kitty Cat is the inspiration for my Name. Her real name is ‘Shikigami’. But to me she is kitty girl.
-            I started Macrame long before I got my beautiful Black Cat. And now she always right along side me everyday while I work. And so was born the name for my Business.
-            Macrame Black Cat. <br />
+    <>
 
-I’ve been perfecting my craft for some time now, almost 7 years. I have no plans to stop. I believe my skills and style are extremely unique to the Macrame World.<br />
+  <Container fluid className="main mb-1 d-flex flex-column justify-content-center">
+				<h1 className="text-center jumboH1 text-info">All About Me </h1>
+				<h4 className="text-center jumboH2">
+					Designing Beautiful Handmade Macrame Jewelry.
+				</h4>
+				<br />
+				<Button id="first_button" href="/collections">
+					Discover More
+				</Button>
+				<Col className="cat_col d-flex justify-content-between align-items-start">
+					<img src={heart_image} className="cat_image" alt="black cata"></img>
+					<img src={black_heart} className="cat_image" alt="black cata"></img>
+				</Col>
+			</Container>
 
-I know There are a lot of macrame artists out there , and I love and respect each and every one of them. I learned a lot by watching YouTube tutorials. But as I learned All the basic skills, I realized there is so much more that can be done with string, time, my two hands, and my amazing kitty cat lurking around me.
-I started making these amazing things that I had not seen in the macrame world. I love colors and I love string! I kind of am a cat😻lol.<br />
+        <p className='about_me_para'> Hi there 👋 and welcome to  Black Cat Macrame. Where I make Handmade Artisan Jewelry.
+                                      My Name is Genny and my beloved Kitty Cat is the inspiration for my Name. I started Macrame long before I got my beautiful Black Cat, and now she is always right alongside me every day while I work. And so was born the name for my Business. Black Cat Macrame.
+                                      I’ve been perfecting my craft for almost 7 years.  I believe my skills and style are extremely unique to the Macrame World. I was born in Georgia US and raised in Buffalo NY.</p>
+        <p className='about_me_para'> I met my wonderful husband and got married in 2004. We both worked hard jobs to support ourselves while at the same time he was going to school to earn a master's degree. 
+          After obtaining his degree, he was able to get a job that allowed us to move back to his home country In 🇹🇷 Turkey. 
+          Whatever life is, the first and foremost is always family. My Husband’s Father had died, and at that same time we also found out his mother had been diagnosed with MS. My husband is the only child,.and  he felt in his heart we had to come, and so we did.  I have been going back and forth between seeing my family and living here. It’s been challenging being in a foreign land. But also very rewarding. I’ve gotten the opportunity to see what life is like on the other side of the world.</p>
 
-So has I have already said My Name is Genny. I was born in Georgia US and raised in Buffalo Ny. I pretty much just tell people NY is where I’m from. I lived In Buffalo practically my whole life.
-I Met my wonderful husband got married. We both worked hard jobs to support ourselves while he was going to school to get a masters degree.<br />
-I don’t have any formal education beyond high school. But I believe life has tough me everything I need to know. And of course my brilliant husband always has the answers! 😂 <br />
+          <p className='about_me_para'>  I was first introduced to Macrame by my mother-in-law Nihal, while  I was adjusting to life in a foreign country. My Mother-In-Law, who is quite crafty, taught Me all the basic knots, but from there I took off. I gobbled up all the information I could about Macrame.
+          When I first started I was like wow how are these people all doing such amazing things with string?</p>
 
-So while he was going to school I worked my butt off as an Assistant Manager at a gas station near our home. I did this for about 8 years.
-And then as things go, family was calling us to journey towards his home. In 🇹🇷 Turkey! We live in a small town Near Izmir.<br />
+          <p className='about_me_para'>And that's when  I started watching YouTube tutorials.  As  I perfected all the basic skills, I realized there is so much more that can be done with string, time, my two hands, and my amazing kitty cat lurking around me.😁
+          I started making these amazing things that I had not seen in the macrame world. I love colors and I love string! I'm very much like a cat 😻lol.
+          So you keep going and you learn,  and put together knot after knot and keep tying knots... and then one day you realize... WOW, I’m pretty good at this!</p>
 
-It really is a beautiful beautiful place. We get to hang out near the sea, well we did until COVID-19.<br />
+          <p className='about_me_para'>I have had the wonderful opportunity to make some custom pieces for some amazing clients that challenged me to be even more creative than I thought was possible.
+          My Macrame journey is ever ongoing. I don’t think I can stop. As long as my hands let me, I’m going to keep pushing forward and I'm going to make more and more amazing pieces of art.</p>
 
-Whatever life is, the first and foremost is always family. My Husband’s Father had died, and at that same time we found out his Mother had been diagnosed with MS. My husband is the only child. So he felt in his heart we had to come. And so we came, and I have been going back and forth between seeing my family and living here. It’s been challenging being in a foreign land. But also very rewarding. I’ve gotten the opportunity to see what life is like on the other side of the world.<br />
+          <p className='about_me_para'>I had dabbled in other crafts throughout my life, but I clung to macrame the most. It inspires me and brings joy to my life. I love my craft.</p>
 
-So a few years back when I was adjusting to life in a foreign country. My Mother In Law, who is quite crafty, showed me how to Macrame. She taught Me all the basic knots, but from there I really took off. I gobbled up all the information I could about Macrame.
-When I first stated I was like wow😳. How are these people all doing such amazing things with string?
-But you keep going and you learn and make knot aftet knot and keep tying knots... and then one day you realize... WOW I’m actually pretty good at this!! <br />
+          <p className='about_me_para'>Making art out of string is so fulfilling for me. Whatever challenges life throws at me, I know I can sit down pick up some string, and make something beautiful.
+          I hope somehow I will inspire someone to know that whatever your circumstances in life, you should do whatever it is that makes you happy.</p>
 
-I have the wonderful opportunity to make some custom pieces for some amazing clients that really challenged me to be even more creative than I thought was possible.
-My Macrame journey is ever ongoing. I don’t think I can actually stop. As long as my hands let’s me, I’m going to keep pushing forward and I'm going to make more and more amazing pieces of art.<br />
 
-I have had this Etsy store for a long time. But this is the first time I sat down and realized, I need to share my story with all of you. Every one has a story and for the first time I’m breaking out of my shyness to share some things about me.<br />
+       
+          <p className='about_me_para'>I think my creations are beautiful, unique, and hopefully inspiring. I make them all with love and gratitude.</p>
+          <p className='about_me_para'>I hope you enjoyed learning a little bit about the Women behind  Black Cat Macrame.</p>
+          <p className='about_me_para'>Cheers! And Much Much ❤️</p>
+          <p className='about_me_para'> Genny</p>
+          
+        
 
-I hope somhow I will inspire someone to know that whatever your circumstances in life, you should do what ever it is that makes you happy.<br />
 
-Making art out of string is so fulfilling for me. Whatever challenges life throws at me, I know I can sit down pick up some string and make something beautiful.
-I think my creations are beautiful, unique and hopefully inspiring. I make them all with love and gratitude.
-I hope you enjoyed learning a little bit about the Women behind Macrame Black Cat.<br />
-Cheers! And Much Much ❤️<br />
-Genny</p>
-        </Col>
-      </Row>
-    </Container>
+
+     </>
   )
 }
 
 export default Story
+

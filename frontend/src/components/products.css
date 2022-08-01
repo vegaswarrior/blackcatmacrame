@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arima&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
 
 .Product_card{
     box-shadow: 10px 10px 10px pink;
@@ -8,9 +9,183 @@
 .Product_card:hover{
     box-shadow: 5px 5px 5px darkorchid;
 }
-/* .review_container {
-    height: 500px;
-} */
+
+
+/* STORY */
+.about_me_container{
+     height: 600px;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+    
+ 
+}
+.about_me_container_2{
+     height: 500px;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+  
+ 
+}
+.box1{
+    width: 500px;
+    height: 400px;
+    
+   
+}
+.heart_image_1 {
+    width: 300px;
+    height: 300px;
+    
+}
+.box2{
+    width: 800px;
+    height: 1300px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px black; 
+} 
+.box5{
+    width: 800px;
+    height: 800px;
+  
+    /* border: 2px solid black;
+    box-shadow: 5px 5px 5px black;  */
+} 
+.box3{
+    width: 500px;
+    height: 400px;
+   
+  
+} 
+.about_me_para {
+    text-indent: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    line-height: 20px;
+}
+.para_indent{
+    text-indent: 50px;
+}
+@media only screen and (max-width: 600px){
+    .heart_image_1{   
+     height: 200px;
+     width: 200px;
+
+    }
+}
+@media only screen and (max-width: 600px){
+    .about_me_para{   
+      font-size: 20px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .box2{   
+     width: 400px;
+     height: 600px
+    }
+}
+#animation-demo {
+	width: 200px;
+	height: 150px;
+	position: relative;
+} 
+
+.animated {
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+	animation-iteration-count:infinite;
+	-webkit-animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes perspectiveLeft {
+    0% {
+        -webkit-transform-origin: 0 0;
+        -webkit-transform: perspective(800px) rotateY(0deg);
+    }
+    100% {
+        -webkit-transform-origin: 0 0;
+        -webkit-transform: perspective(800px) rotateY(-180deg);
+    }
+}
+@keyframes perspectiveLeft {
+    0% {
+        transform-origin: 0 0;
+        transform: perspective(800px) rotateY(0deg);
+    }
+    100% {
+        transform-origin: 0 0;
+        transform: perspective(800px) rotateY(-180deg);
+    }
+}
+.perspectiveLeft {
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation-name: perspectiveLeft;
+    animation-name: perspectiveLeft;
+}
+.css-text-mask {
+	font-size: 99px;
+	font-family: 'ZCOOL XiaoWei', serif;
+	font-weight: bold;
+	letter-spacing: 8px;
+	background-image: url('https://html-generator.com/uploads/images/2022/07/31/97637BZF9HWFNFY.jpg');
+	background-position: -212px 0px;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: #0000;
+}
+
+#animation-demo2 {
+	width: 200px;
+	height: 150px;
+	position: relative;
+} 
+
+.animated {
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+	animation-iteration-count:infinite;
+	-webkit-animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes perspectiveRight {
+    0% {
+        -webkit-transform-origin: 100% 0;
+        -webkit-transform: perspective(800px) rotateY(0deg);
+    }
+    100% {
+        -webkit-transform-origin: 100% 0;
+        -webkit-transform: perspective(800px) rotateY(180deg);
+    }
+}
+@keyframes perspectiveRight {
+    0% {
+        transform-origin: 100% 0;
+        transform: perspective(800px) rotateY(0deg);
+    }
+    100% {
+        transform-origin: 100% 0;
+        transform: perspective(800px) rotateY(180deg);
+    }
+}
+.perspectiveRight {
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation-name: perspectiveRight;
+    animation-name: perspectiveRight;
+}
+
+
+/* FOOTER */
 .copyRight {
     background-color: black;
     color: #fff;
@@ -29,6 +204,9 @@
     margin-bottom: 10px;
     font-size: 20px;
 }
+
+
+/* PRODUCTS CARDS */
 #product_image_card{
     max-width: 300px;
     max-height: 300px;
