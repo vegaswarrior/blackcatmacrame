@@ -63,12 +63,14 @@ function Story() {
           <p className='about_me_para'>I hope you enjoyed learning a little bit about the Women behind  Black Cat Macrame.</p>
           <p className='about_me_para'>Cheers! And Much Much ❤️</p>
           <p className='about_me_para'> Genny</p>
+          <div className='clear'></div>
                 </Col>
               </Row>
             </Col>
            
           </Row>
         </Container>
+        <div className='clear'></div>
      </>
   )
 }

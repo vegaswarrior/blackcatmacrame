@@ -1,6 +1,6 @@
 import asyncHandler from "express-async-handler";
 import Product from "../models/productModel.js";
-import deleteImagesFromCloud from "../utils/deleteImagesFromCloud.js";
+// import deleteImagesFromCloud from "../utils/deleteImagesFromCloud.js";
 
 // @desc    Fetch all products
 // @route   GET /api/products
@@ -84,7 +84,7 @@ const updateProduct = asyncHandler(async (req, res) => {
 	const product = await Product.findById(req.params.id);
 
 	if (product) {
-		await deleteImagesFromCloud(product.images, images);
+		// await deleteImagesFromCloud(product.images, images);
 
 		product.name = name;
 		product.price = price;

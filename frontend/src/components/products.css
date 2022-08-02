@@ -15,14 +15,14 @@
 
 .about_me_container {
     height: 1000px;
-    background-image: url('./images/love.jpg');
+    background-image: url('./images/bubble_heart.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .about_h1{
     font-size: 75px;
-     color: red;
+    color: red;
 }
 .left_about_col{
     height: 600px;
@@ -30,6 +30,10 @@
 }
 .right_about_col {
     height: 1000px;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    /* text-overflow: clip; */
+   
 }
 
 .about_me_pic {
@@ -38,6 +42,15 @@
 }
 .about_me_para {
     font-size: 14px;
+    overflow: hidden;
+}
+@media only screen and (max-width: 700px){
+    .right_about_col{
+       height: 1000px;
+    }
+}
+.clear {
+    clear: both;
 }
 .heart-shape{
     position: relative;

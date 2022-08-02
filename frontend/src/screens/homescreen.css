@@ -108,12 +108,13 @@
     height: 300px;
   }
   .footer_container {
+    /* position: fixed; */
     height: 300px;
     background-color: #000;
   }
   .featured_products_container {
       display: flex;
-      background-color: blue;
+   
       flex-direction: column;   
       background-image: url("./product1.jpeg");
       background-color: #cccccc; 
