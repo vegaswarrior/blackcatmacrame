@@ -9,23 +9,33 @@ import "./products.css";
 function Story() {
   return (
     <>
+        <Container fluid className='about_me_container'>
+          <Row>
+            <Col lg={6} className="text-center left_about_col">
+              <Row>
+                <Col>
+                    <h1 className='text-center about_h1'>All About Me</h1>
+                </Col>
+                <Row>
+                <Col>
+                    <i class="fa-solid fa-heart"></i>
+                   
+                      <img src={jenny} className="about_me_pic heart-shape" />
+                    <i class="fa-solid fa-heart"></i>
+                </Col>
+                 <Row>
+                   <Col> 
+                   <i class="fa-solid fa-heart"></i>
+                   </Col>
+                 </Row>
+                </Row>
 
-  <Container fluid className="main mb-1 d-flex flex-column justify-content-center">
-				<h1 className="text-center jumboH1 text-info">All About Me </h1>
-				<h4 className="text-center jumboH2">
-					Designing Beautiful Handmade Macrame Jewelry.
-				</h4>
-				<br />
-				<Button id="first_button" href="/collections">
-					Discover More
-				</Button>
-				<Col className="cat_col d-flex justify-content-between align-items-start">
-					<img src={heart_image} className="cat_image" alt="black cata"></img>
-					<img src={black_heart} className="cat_image" alt="black cata"></img>
-				</Col>
-			</Container>
-
-        <p className='about_me_para'> Hi there 👋 and welcome to  Black Cat Macrame. Where I make Handmade Artisan Jewelry.
+              </Row>
+            </Col>
+            <Col lg={6} className=" text-center right_about_col">
+              <Row>
+                <Col>
+                <p className='about_me_para'> Hi there 👋 and welcome to  Black Cat Macrame. Where I make Handmade Artisan Jewelry.
                                       My Name is Genny and my beloved Kitty Cat is the inspiration for my Name. I started Macrame long before I got my beautiful Black Cat, and now she is always right alongside me every day while I work. And so was born the name for my Business. Black Cat Macrame.
                                       I’ve been perfecting my craft for almost 7 years.  I believe my skills and style are extremely unique to the Macrame World. I was born in Georgia US and raised in Buffalo NY.</p>
         <p className='about_me_para'> I met my wonderful husband and got married in 2004. We both worked hard jobs to support ourselves while at the same time he was going to school to earn a master's degree. 
@@ -53,11 +63,12 @@ function Story() {
           <p className='about_me_para'>I hope you enjoyed learning a little bit about the Women behind  Black Cat Macrame.</p>
           <p className='about_me_para'>Cheers! And Much Much ❤️</p>
           <p className='about_me_para'> Genny</p>
-          
-        
-
-
-
+                </Col>
+              </Row>
+            </Col>
+           
+          </Row>
+        </Container>
      </>
   )
 }
