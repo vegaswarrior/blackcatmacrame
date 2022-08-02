@@ -14,7 +14,7 @@ function Story() {
             <Col lg={6} className="text-center left_about_col">
               <Row>
                 <Col>
-                    <h1 className='text-center about_h1'>All About Me</h1>
+                   <div class="css-text-mask text-center">All About Me</div>
                 </Col>
                 <Row>
                 <Col>

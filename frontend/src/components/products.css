@@ -12,7 +12,26 @@
 
 
 /* ABOUT ME  */
+.css-text-mask {
+	font-size: 89px;
+	font-family: 'Black And White Picture', sans-serif;
+	background-image: url('https://html-generator.com/uploads/images/2022/08/02/21175W99P9U2LDS.jpg');
+	background-position: 0px 0px;
+	-webkit-animation: animatedBackground 10s linear infinite normal;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: #0000;
+}
 
+@-webkit-keyframes animatedBackground {
+	0% { background-position: 0 0 }
+	100% { background-position: 500px 0 }
+}
+@media only screen and (max-width: 700px){
+    .css-text-mask{
+       font-size: 20px;
+    }
+}
 .about_me_container {
     height: 1000px;
     background-image: url('./images/bubble_heart.png');
@@ -22,7 +41,7 @@
 }
 .about_h1{
     font-size: 75px;
-    color: red;
+    color: white;
 }
 .left_about_col{
     height: 600px;
