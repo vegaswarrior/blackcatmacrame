@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col, Form,  } from 'react-bootstrap'
 import '../screens/homescreen.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ContactImage from '../components/images/conact2.jpeg'
+import ContactImage from '../components/images/contact4.jpeg'
 
 function Contact() {
   return (
@@ -14,7 +14,23 @@ function Contact() {
     <Container className='form_container'>
       <Row>
         <Col>
-          <div className='left_side_div'>
+
+        </Col>
+        <Col>
+
+        </Col>
+      </Row>
+    </Container>
+    
+    </>
+
+  )
+}
+
+export default Contact
+
+
+          {/* <div className='left_side_div'>
                <div className='mt-3'><span className='text-dark'><strong>Phone Number:</strong></span> <span>716-336-7973</span></div>
                <div className='mt-3'><span className='text-dark'><strong>E-Mail:</strong></span> <span>vegaswarrior888@gmail.com</span></div>
                <div className='mt-3'><span className='text-dark'><strong>Address:</strong></span> <span>Instabul Turkey</span></div>
@@ -22,10 +38,10 @@ function Contact() {
                <h3 className='text-center text-primary '>Follow Us</h3>
  
 
-          </div>
-        </Col>
-        <Col>
-        <div className='right_side_div'>
+          </div> */}
+
+
+                  {/* <div className='right_side_div'>
           
            <Form className='text-center'>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -45,14 +61,4 @@ function Contact() {
               <Form.Control as="textarea" rows={3} />
             </Form.Group>
          </Form>
-        </div>
-        </Col>
-      </Row>
-    </Container>
-    
-    </>
-
-  )
-}
-
-export default Contact
+        </div> */}

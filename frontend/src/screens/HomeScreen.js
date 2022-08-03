@@ -29,6 +29,7 @@ const HomeScreen = ({match}) => {
 		<>
 			<Container fluid className="main mb-1 d-flex flex-column justify-content-center">
 				<h1 className="text-center jumboH1 text-info">Welcome To Black Cat Macrame</h1>
+				{/* <h1 class="css-text-mask-1 text-center">Welcome to Black <br /> Cat Macrame</h1> */}
 				<h4 className="text-center jumboH2">
 					Designing Beautiful Handmade Macrame Jewelry.
 				</h4>

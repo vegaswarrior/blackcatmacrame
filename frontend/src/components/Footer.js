@@ -7,7 +7,7 @@ const Footer = () => {
     <footer>
       <Container fluid className='footer_container'> 
         <Row>
-          <Col className='text-center py-3 text-info'>
+          <Col className='text-center py-3 text-info mr-4'>
           <ul className='list-unstyled'>
             <LinkContainer to="/">
                 <li><button className='footerButtons'>Home</button></li>
@@ -29,16 +29,16 @@ const Footer = () => {
           <Col className='text-center py-3 text-info'>
             <ul className='list-unstyled'>
               <li>
-                  <a href="https://www.facebook.com/MacrameBlackCat"><i className="fa-brands fa-facebook footer-icons"></i></a>
+                  <a href="https://www.facebook.com/MacrameBlackCat"><i className="fa-brands fa-facebook footer-icons"></i> facebook</a>
               </li>
               <li>
-                  <a href="https://www.instagram.com/macrameblackcat/?fbclid=IwAR0vuZkalF3G0wG7Mr4G2GlLZSHpwUxf_ZMAIFZ8op5ApSLYCU76R8qWNfU"><i className="fa-brands fa-instagram footer-icons"></i></a>
+                  <a href="https://www.instagram.com/macrameblackcat/?fbclid=IwAR0vuZkalF3G0wG7Mr4G2GlLZSHpwUxf_ZMAIFZ8op5ApSLYCU76R8qWNfU"><i className="fa-brands fa-instagram footer-icons"></i> instagram</a>
               </li>
               <li>
-                  <a href="https://www.etsy.com/shop/MacrameBlackCat?fbclid=IwAR1A5vjBmlsHJOoa8k1dC6WVWdSjjd6Q9c-8mJxZRn4gMajTdp7ahSZBKjI"><i className="fa-brands fa-etsy footer-icons"></i></a>
+                  <a href="https://www.etsy.com/shop/MacrameBlackCat?fbclid=IwAR1A5vjBmlsHJOoa8k1dC6WVWdSjjd6Q9c-8mJxZRn4gMajTdp7ahSZBKjI"><i className="fa-brands fa-etsy footer-icons"></i>etsy   </a>
               </li>
               <li>
-                  <a href="https://www.facebook.com"><i className="fa-brands fa-pinterest footer-icons"></i></a>
+                  <a href="https://www.facebook.com"><i className="fa-brands fa-pinterest footer-icons"></i>pinterest</a>
               </li>
             </ul>
           </Col>

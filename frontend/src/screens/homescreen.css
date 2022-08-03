@@ -21,6 +21,20 @@
     animation-name: moveInleft;
     animation-duration: 2s;
   }
+  .css-text-mask-1{
+    font-size: 60px;
+    font-family: 'Cherry Swash', cursive;
+    font-weight: bold;
+    font-style: italic;
+    background-image: -webkit-repeating-radial-gradient(94% 48%, ellipse cover, #860999 0%, #14b9de 30%);
+    /* background-image: url('https://html-generator.com/uploads/images/2022/07/31/97637BZF9HWFNFY.jpg'); */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #0000;
+ 
+  }
+  
+  
   .jumboH2 {
     font-family: 'Birthstone', cursive;
     font-size: 35px;
@@ -148,17 +162,24 @@
   background-repeat: no-repeat; 
   background-size: cover;
 }
+@media only screen and (max-width: 500px){
+  .contact_container{   
+    height: 600px;
+    background-color: red;
+  }
+}
+
 .form_container {
   border: 1px solid black;
   background-color: grey;
   color: white;
   height: 500px;
 }
-.left_side_div {
-  border-right: 1px solid white;
-  height: 500px;
-  width: 300px;
-}
+
+
+
+
+
   @media only screen and (max-width: 500px){
     .product_row{   
       align-self: center;

@@ -58,6 +58,8 @@
 .about_me_pic {
     height: 400px;
     width: 400px;
+    border: 1px solid #fff;
+    box-shadow: 10px 10px 10px #fff;
 }
 .about_me_para {
     font-size: 14px;
@@ -337,11 +339,21 @@
     animation-name: moveInRight;
     animation-duration: 2s;
   }
-  .testPara {
+.testPara {
     font-size: 20px;
     color: black;
     font-family: 'Arima', cursive;
-  }
+}
+@media only screen and (max-width: 700px){
+    .jumboH3{
+       font-size: 40px;
+    }
+}
+@media only screen and (max-width: 700px){
+    .jumboH4{
+       font-size: 40px;
+    }
+}
   @keyframes moveInleft {
     0% {
      opacity: 0;
