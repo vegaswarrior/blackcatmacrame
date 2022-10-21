@@ -133,9 +133,7 @@
     font-size: 16px;
     font-family: "Helvetica";
     text-decoration: none;
-    /* margin: 30px 0; */
     border: 2px solid pink;
-    /* padding: 18px 70px; */
     overflow: hidden;
     transition: 1s all ease;
     z-index: 2
@@ -164,6 +162,11 @@
 .Product_card:hover::before{
     height: 380%;
 }
+/* @media only screen and (max-width: 700px){
+    .Product_card {
+       margin-right: 10%;
+    }
+} */
 .jumboH3 {
     font-family: 'Birthstone', cursive;
     font-size: 60px;

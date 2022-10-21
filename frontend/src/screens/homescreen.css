@@ -147,6 +147,12 @@
       height: 175px
     }
 }
+@media only screen and (width:700px) {
+    .cat_image {
+      width: 150px;
+      height: 150px
+    }
+}
 @media only screen and (width:650px) {
     .cat_image {
       width: 150px;
