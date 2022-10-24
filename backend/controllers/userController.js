@@ -1,15 +1,21 @@
 import asyncHandler from "express-async-handler";
 import generateToken from "../utils/generateToken.js";
 import User from "../models/userModel.js";
+import sgMail from '@sendgrid/mail';
+import dotenv from 'dotenv';
+dotenv.config();
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
 // import deleteSingleImageFromCloud from "../utils/deleteSingleImageFromCloud.js";
 
 // @desc    Auth user & get token
 // @route   POST /api/users/login
 // @access  Public
 const authUser = asyncHandler(async (req, res) => {
-	const {email, password} = req.body;
+	const { email, password } = req.body;
 
-	const user = await User.findOne({email});
+	const user = await User.findOne({ email });
 
 	if (user && (await user.matchPassword(password))) {
 		res.json({
@@ -26,13 +32,71 @@ const authUser = asyncHandler(async (req, res) => {
 	}
 });
 
+// @desc Reset a password
+// @route POST /api/users/reset
+// @access Public
+const resetPassword = asyncHandler(async (req, res) => {
+	const { email } = req.body;
+
+	console.log(email);
+
+	const user = await User.findOne({ email });
+	if (user) {
+		try {
+			const msg = {
+				to: user.email,
+				from: process.env.SENDGRID_EMAIL,
+				subject: 'Password Reset',
+				html: `
+			<p>You have requested for password reset</p>
+			<h5>click in this <a href="${process.env.HOSTEDLOCALHOST}/update_password/${user._id}">link</a> to reset password</h5>
+			`
+			}
+			sgMail.send(msg)
+			res.json({ message: "check your mail", success: true })
+		} catch (e) {
+			res.status(401);
+		}
+	} else {
+		res.json({ message: "User doesnt exists with given email", success: false });
+	}
+});
+
+// @desc    update a user password
+// @route   POST /api/update_password/:id
+// @access  Public
+const updatePassword = asyncHandler(async (req, res) => {
+	const { password, userId } = req.body;
+	const user = await User.findById(userId);
+
+	if (user) {
+		try {
+			user.password = password || user.password;
+			const updatedUser = await user.save();
+
+			res.json({
+				message: "Password updated successfully",
+				success: true
+			});
+		} catch (e) {
+			res.status(404);
+		}
+	} else {
+		res.json({
+			message: "User not found",
+			success: false
+		});
+	}
+
+
+});
 // @desc    Register a new user
 // @route   POST /api/users
 // @access  Public
 const registerUser = asyncHandler(async (req, res) => {
-	const {name, email, password} = req.body;
+	const { name, email, password } = req.body;
 
-	const userExists = await User.findOne({email});
+	const userExists = await User.findOne({ email });
 
 	if (userExists) {
 		res.status(400);
@@ -134,7 +198,7 @@ const deleteUser = asyncHandler(async (req, res) => {
 
 	if (user) {
 		await user.remove();
-		res.json({message: "User removed"});
+		res.json({ message: "User removed" });
 	} else {
 		res.status(404);
 		throw new Error("User not found");
@@ -193,5 +257,7 @@ export {
 	getUsers,
 	deleteUser,
 	getUserById,
-	updateUser
+	updateUser,
+	resetPassword,
+	updatePassword,
 };

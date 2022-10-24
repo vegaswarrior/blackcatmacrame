@@ -8,11 +8,14 @@ import {
   productCreateReducer,
   productUpdateReducer,
   productReviewCreateReducer,
-  productTopRatedReducer,
+  productTopRatedReducer,  
+  updateCategoryReducer,
 } from './reducers/productReducers'
 import { cartReducer } from './reducers/cartReducers'
 import {
   userLoginReducer,
+  userResetReducer,
+  userUpdatePasswordReducer,
   userRegisterReducer,
   userDetailsReducer,
   userUpdateProfileReducer,
@@ -37,8 +40,11 @@ const reducer = combineReducers({
   productUpdate: productUpdateReducer,
   productReviewCreate: productReviewCreateReducer,
   productTopRated: productTopRatedReducer,
+  productCategory: updateCategoryReducer,
   cart: cartReducer,
   userLogin: userLoginReducer,
+  userReset: userResetReducer,
+  userUpdatePassword: userUpdatePasswordReducer,  
   userRegister: userRegisterReducer,
   userDetails: userDetailsReducer,
   userUpdateProfile: userUpdateProfileReducer,

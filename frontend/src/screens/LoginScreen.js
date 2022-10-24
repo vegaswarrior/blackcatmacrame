@@ -55,6 +55,14 @@ const LoginScreen = ({ location, history }) => {
           ></Form.Control>
         </Form.Group>
 
+        <Row className='py-3'>
+          <Col>
+            <Link to={redirect ? `/reset?redirect=${redirect}` : '/reset'}>
+              Forgot your password?
+            </Link>
+          </Col>
+        </Row>
+
         <Button type='submit' variant='primary'>
           Sign In
         </Button>

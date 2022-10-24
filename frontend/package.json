@@ -1,9 +1,9 @@
 {
   "name": "frontend",
-  "proxy": "http://127.0.0.1:5000",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.7.0",
     "@fortawesome/fontawesome-free": "^6.1.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@stripe/react-stripe-js": "^1.9.0",
@@ -12,6 +12,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.27.2",
+    "http-proxy-middleware": "^2.0.6",
     "react": "^16.13.1",
     "react-bootstrap": "^1.6.5",
     "react-dom": "^16.13.1",
@@ -22,7 +23,8 @@
     "react-scripts": "^5.0.1",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "sweetalert2": "^11.6.1"
   },
   "scripts": {
     "start": "react-scripts start",

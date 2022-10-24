@@ -11,6 +11,7 @@ import {PRODUCT_CREATE_REVIEW_RESET} from "../constants/productConstants";
 import ProductGallery from "../components/ProductGallery";
 
 const ProductScreen = ({history, match}) => {
+	console.log('history', history);
 	const [qty, setQty] = useState(1);
 	const [rating, setRating] = useState(0);
 	const [comment, setComment] = useState("");
@@ -57,9 +58,9 @@ const ProductScreen = ({history, match}) => {
 
 	return (
 		<>
-			<Link className="btn btn-light my-3" to="/">
+			<Button className="btn btn-light my-3" onClick={() => history.goBack()}>
 				Go Back
-			</Link>
+			</Button>
 			{loading ? (
 				<Loader />
 			) : error ? (

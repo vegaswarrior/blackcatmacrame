@@ -7,6 +7,8 @@ import HomeScreen from './screens/HomeScreen'
 import ProductScreen from './screens/ProductScreen'
 import CartScreen from './screens/CartScreen'
 import LoginScreen from './screens/LoginScreen'
+import ResetPasswordScreen from './screens/ResetPasswordScreen'
+import NewPasswordScreen from "./screens/NewPasswordScreen";
 import RegisterScreen from './screens/RegisterScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import ShippingScreen from './screens/ShippingScreen'
@@ -44,6 +46,8 @@ const App = () => {
           <Route path='/placeorder' component={PlaceOrderScreen} />
           <Route path='/login' component={LoginScreen} />
           <Route path='/register' component={RegisterScreen} />
+          <Route path='/reset' component={ResetPasswordScreen} />
+          <Route path='/update_password/:id' component={NewPasswordScreen} />
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/product/:id' component={ProductScreen} />
           <Route path='/cart/:id?' component={CartScreen} />
@@ -57,7 +61,6 @@ const App = () => {
           <Route path='/search/:keyword' component={HomeScreen} exact />
           <Route path='/page/:pageNumber' component={HomeScreen} exact />
           <Route path='/search/:keyword/page/:pageNumber' component={HomeScreen} exact />
-
 
           
            </Container>

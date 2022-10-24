@@ -3,9 +3,9 @@ import mongoose from "mongoose";
 
 const reviewSchema = mongoose.Schema(
 	{
-		name: {type: String, required: true},
-		rating: {type: Number, required: true},
-		comment: {type: String, required: true},
+		name: { type: String, required: true },
+		rating: { type: Number, required: true },
+		comment: { type: String, required: true },
 		user: {
 			type: mongoose.Schema.Types.ObjectId,
 			required: true,
@@ -16,17 +16,6 @@ const reviewSchema = mongoose.Schema(
 		timestamps: true
 	}
 );
-// const categories = mongoose.Schema(
-// 	{
-// 		necklaces: {type: String},
-// 		bracletes: {type: String},
-// 		chokers: {type: String},
-// 		pendants: {type: String},
-// 		statementpieces: {type: String},
-// 		miscellaneous: {type: String},
-// 	}
-// );
-
 const productSchema = mongoose.Schema(
 	{
 		user: {
@@ -82,6 +71,5 @@ const productSchema = mongoose.Schema(
 const Product = mongoose.model("Product", productSchema);
 
 
-
-
 export default Product;
+

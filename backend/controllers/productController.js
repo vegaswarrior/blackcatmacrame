@@ -1,5 +1,6 @@
 import asyncHandler from "express-async-handler";
 import Product from "../models/productModel.js";
+import Category from "../models/categoryModel.js";
 // import deleteImagesFromCloud from "../utils/deleteImagesFromCloud.js";
 
 // @desc    Fetch all products
@@ -11,19 +12,25 @@ const getProducts = asyncHandler(async (req, res) => {
 
 	const keyword = req.query.keyword
 		? {
-				name: {
-					$regex: req.query.keyword,
-					$options: "i"
-				}
-		  }
+			name: {
+				$regex: req.query.keyword,
+				$options: "i"
+			}
+		}
 		: {};
+	let condition = "";
+	if (req.query.category) {
+		condition = { ...keyword, category: req.query.category };
+	} else {
+		condition = { ...keyword };
+	}
 
-	const count = await Product.countDocuments({...keyword});
-	const products = await Product.find({...keyword})
+	const count = await Product.countDocuments(condition);
+	const products = await Product.find(condition)
 		.limit(pageSize)
 		.skip(pageSize * (page - 1));
 
-	res.json({products, page, pages: Math.ceil(count / pageSize)});
+	res.json({ products, page, pages: Math.ceil(count / pageSize) });
 });
 
 // @desc    Fetch single product
@@ -48,7 +55,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
 
 	if (product) {
 		await product.remove();
-		res.json({message: "Product removed"});
+		res.json({ message: "Product removed" });
 	} else {
 		res.status(404);
 		throw new Error("Product not found");
@@ -79,7 +86,7 @@ const createProduct = asyncHandler(async (req, res) => {
 // @route   PUT /api/products/:id
 // @access  Private/Admin
 const updateProduct = asyncHandler(async (req, res) => {
-	const {name, price, description, images, brand, category, countInStock} = req.body;
+	const { name, price, description, images, brand, category, countInStock } = req.body;
 
 	const product = await Product.findById(req.params.id);
 
@@ -106,7 +113,7 @@ const updateProduct = asyncHandler(async (req, res) => {
 // @route   POST /api/products/:id/reviews
 // @access  Private
 const createProductReview = asyncHandler(async (req, res) => {
-	const {rating, comment} = req.body;
+	const { rating, comment } = req.body;
 
 	const product = await Product.findById(req.params.id);
 
@@ -136,7 +143,7 @@ const createProductReview = asyncHandler(async (req, res) => {
 			product.reviews.length;
 
 		await product.save();
-		res.status(201).json({message: "Review added"});
+		res.status(201).json({ message: "Review added" });
 	} else {
 		res.status(404);
 		throw new Error("Product not found");
@@ -147,10 +154,11 @@ const createProductReview = asyncHandler(async (req, res) => {
 // @route   GET /api/products/top
 // @access  Public
 const getTopProducts = asyncHandler(async (req, res) => {
-	const products = await Product.find({}).sort({rating: -1}).limit(3);
+	const products = await Product.find({}).sort({ rating: -1 }).limit(3);
 
 	res.json(products);
 });
+
 
 export {
 	getProducts,
@@ -159,5 +167,5 @@ export {
 	createProduct,
 	updateProduct,
 	createProductReview,
-	getTopProducts
+	getTopProducts,
 };
