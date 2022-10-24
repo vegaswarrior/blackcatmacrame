@@ -16,17 +16,6 @@ const reviewSchema = mongoose.Schema(
 		timestamps: true
 	}
 );
-// const categories = mongoose.Schema(
-// 	{
-// 		necklaces: {type: String},
-// 		bracletes: {type: String},
-// 		chokers: {type: String},
-// 		pendants: {type: String},
-// 		statementpieces: {type: String},
-// 		miscellaneous: {type: String},
-// 	}
-// );
-
 const productSchema = mongoose.Schema(
 	{
 		user: {

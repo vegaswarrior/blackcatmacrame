@@ -9,7 +9,7 @@ const products = [
 		description:
 			"Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working",
 		brand: "Apple",
-		category: "Electronics",
+		category: "Miscellaneous",
 		price: 89.99,
 		countInStock: 3,
 		rating: 0,
@@ -25,7 +25,7 @@ const products = [
 		description:
 			"Introducing the iPhone 11 Pro. A transformative triple-camera system that adds tons of capability without complexity. An unprecedented leap in battery life",
 		brand: "Apple",
-		category: "Electronics",
+		category: "Miscellaneous",
 		price: 599.99,
 		countInStock: 10,
 		rating: 0,
@@ -41,7 +41,7 @@ const products = [
 		description:
 			"Characterized by versatile imaging specs, the Canon EOS 80D further clarifies itself using a pair of robust focusing systems and an intuitive design",
 		brand: "Cannon",
-		category: "Electronics",
+		category: "Miscellaneous",
 		price: 929.99,
 		countInStock: 0,
 		rating: 0,
@@ -57,7 +57,7 @@ const products = [
 		description:
 			"The ultimate home entertainment center starts with PlayStation. Whether you are into gaming, HD movies, television, music",
 		brand: "Sony",
-		category: "Electronics",
+		category: "Chokers",
 		price: 399.99,
 		countInStock: 10,
 		rating: 0,
@@ -73,7 +73,7 @@ const products = [
 		description:
 			"Get a better handle on your games with this Logitech LIGHTSYNC gaming mouse. The six programmable buttons allow customization for a smooth playing experience",
 		brand: "Logitech",
-		category: "Electronics",
+		category: "Chokers",
 		price: 49.99,
 		countInStock: 7,
 		rating: 0,
@@ -89,7 +89,87 @@ const products = [
 		description:
 			"Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
 		brand: "Amazon",
-		category: "Electronics",
+		category: "Bracelets",
+		price: 29.99,
+		countInStock: 0,
+		rating: 0,
+		numReviews: 0
+	},
+	{
+		name: "Amazon Echo Dot 3rd Generation",
+		images: [
+			"https://images.unsplash.com/photo-1544451256-d79e9e199fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+			"https://images.unsplash.com/photo-1544428571-aaf850ce481e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+			"https://images.unsplash.com/photo-1518444667766-94728310399f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80"
+		],
+		description:
+			"Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+		brand: "Amazon",
+		category: "Pendants",
+		price: 29.99,
+		countInStock: 0,
+		rating: 0,
+		numReviews: 0
+	},
+	{
+		name: "Amazon Echo Dot 3rd Generation",
+		images: [
+			"https://images.unsplash.com/photo-1544451256-d79e9e199fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+			"https://images.unsplash.com/photo-1544428571-aaf850ce481e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+			"https://images.unsplash.com/photo-1518444667766-94728310399f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80"
+		],
+		description:
+			"Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+		brand: "Amazon",
+		category: "StatementPieces",
+		price: 29.99,
+		countInStock: 0,
+		rating: 0,
+		numReviews: 0
+	},
+	{
+		name: "Amazon Echo Dot 3rd Generation",
+		images: [
+			"https://images.unsplash.com/photo-1544451256-d79e9e199fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+			"https://images.unsplash.com/photo-1544428571-aaf850ce481e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+			"https://images.unsplash.com/photo-1518444667766-94728310399f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80"
+		],
+		description:
+			"Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+		brand: "Amazon",
+		category: "StatementPieces",
+		price: 29.99,
+		countInStock: 0,
+		rating: 0,
+		numReviews: 0
+	},
+	{
+		name: "Amazon Echo Dot 3rd Generation",
+		images: [
+			"https://images.unsplash.com/photo-1544451256-d79e9e199fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+			"https://images.unsplash.com/photo-1544428571-aaf850ce481e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+			"https://images.unsplash.com/photo-1518444667766-94728310399f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80"
+		],
+		description:
+			"Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+		brand: "Amazon",
+		category: "Necklaces",
+		price: 29.99,
+		countInStock: 0,
+		rating: 0,
+		numReviews: 0
+	},
+	{
+		name: "Amazon Echo Dot 3rd Generation",
+		images: [
+			"https://images.unsplash.com/photo-1544451256-d79e9e199fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+			"https://images.unsplash.com/photo-1544428571-aaf850ce481e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+			"https://images.unsplash.com/photo-1518444667766-94728310399f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80"
+		],
+		description:
+			"Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+		brand: "Amazon",
+		category: "Necklaces",
 		price: 29.99,
 		countInStock: 0,
 		rating: 0,
