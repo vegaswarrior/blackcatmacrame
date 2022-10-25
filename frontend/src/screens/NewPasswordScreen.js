@@ -38,6 +38,9 @@ const NewPasswordScreen = ({ history, match }) => {
                 showConfirmButton: false,
                 timer: 3000
             })
+            if(message.data.success) {
+                history.push('/login');
+            }
         }
     }, [loading, message, error]);
 
