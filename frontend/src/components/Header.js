@@ -40,14 +40,26 @@ const Header = () => {
 						<LinkContainer to="/contact">
 							<Navbar.Brand className="jumboH2 text-info">Contact Me</Navbar.Brand>
 						</LinkContainer>
-                  <NavDropdown title="Products" className="jumboH2 text-info">
-                      <NavDropdown.Item Link to="/necklaces" className="jumboH5 text-info">Necklace</NavDropdown.Item>
-                      <NavDropdown.Item Link to="/bracelets" className="jumboH5 text-info">Bracelets</NavDropdown.Item>
-                      <NavDropdown.Item Link to="/pendants" className="jumboH5 text-info">Pendant Necklaces</NavDropdown.Item>
-                      <NavDropdown.Item Link to="/chokers" className="jumboH5 text-info">Choker Necklace</NavDropdown.Item>
-                      <NavDropdown.Item Link to="/statementpieces" className="jumboH5 text-info">Statement Pieces and Sets</NavDropdown.Item>
-                      <NavDropdown.Item Link to="/miscellaneous" className="jumboH5 text-info">Miscellaneous</NavDropdown.Item>
-                  </NavDropdown>
+                  <NavDropdown title="Products" className="jumboH2 text-info" id="navbardropdown1">
+                  <LinkContainer to='/necklaces'>
+                    <NavDropdown.Item className="jumboH5 text-info">Necklaces</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/pendants'>
+                    <NavDropdown.Item className="jumboH5 text-info">Pendants</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/statementpieces'>
+                    <NavDropdown.Item className="jumboH5 text-info">Statement Pieces</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/profile'>
+                    <NavDropdown.Item className="jumboH5 text-info">Profile</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/profile'>
+                    <NavDropdown.Item className="jumboH5 text-info">Profile</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/profile'>
+                    <NavDropdown.Item className="jumboH5 text-info">Profile</NavDropdown.Item>
+                  </LinkContainer>
+                </NavDropdown>
           </Nav>
           <Nav className="ml-auto">
 							<LinkContainer to="/cart">

@@ -44,8 +44,12 @@
 .jumboH5 {
     font-family: 'Birthstone', cursive;
     font-size: 20px;
+    background-color: transparent;
 }
-
+#navbardropdown1{
+  background-color: transparent;
+  color:rgb(19, 178, 241)
+}
   /* FIRST BUTTON  */
 #first_button{
     align-self: center;
