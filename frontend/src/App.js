@@ -29,7 +29,7 @@ import Pendants from './components/Pendants'
 import Chokers from './components/Chokers'
 import StatementPieces from './components/StatementPieces'
 import Miscellaneous from './components/Miscellaneous'
-import Header_2 from './components/Header_2'
+
 
 
 
@@ -67,8 +67,6 @@ const App = () => {
           
            </Container>
           <Route path='/' component={HomeScreen} exact />
-          <Route path='/header_2' component={Header_2} exact />
-
           <Route path='/necklaces' component={Necklaces} />
           <Route path='/bracelets' component={Bracelets} />
           <Route path='/pendants' component={Pendants} />
