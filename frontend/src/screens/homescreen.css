@@ -4,7 +4,10 @@
 .navbar1 {
  background-color: rgb(0, 0, 0);
 }
-
+#first_nav{
+  display: flex;
+  flex-direction: row;
+}
 .main {
     height: 600px;
     border-bottom: 1px solid black;
@@ -251,4 +254,10 @@
   opacity: 1;
   transform: translateY(0);
   }
+}
+.first_carousel{
+  height: 500px
+}
+.carousel_item {
+  height: 500px;
 }

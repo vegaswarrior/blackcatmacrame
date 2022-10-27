@@ -30,16 +30,16 @@ const Header = () => {
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             {/* <Route render={({ history }) => <SearchBox history={history} />} /> */}
-            <Nav className="me-auto">
+            <Nav className="me-auto" id="first_nav">
             <LinkContainer to="/">
-							<Navbar.Brand className="jumboH2 text-info ">Home</Navbar.Brand>
-						</LinkContainer>
-						<LinkContainer to="/story">
-							<Navbar.Brand className="jumboH2 text-info">My Story</Navbar.Brand>
-						</LinkContainer>
-						<LinkContainer to="/contact">
-							<Navbar.Brand className="jumboH2 text-info">Contact Me</Navbar.Brand>
-						</LinkContainer>
+				<Navbar.Brand className="jumboH2 text-info ">Home</Navbar.Brand>
+			</LinkContainer>
+			<LinkContainer to="/story">
+				<Navbar.Brand className="jumboH2 text-info">My Story</Navbar.Brand>
+			</LinkContainer>
+			<LinkContainer to="/contact">
+				<Navbar.Brand className="jumboH2 text-info">Contact Me</Navbar.Brand>
+			</LinkContainer>
                   <NavDropdown title="Products" className="jumboH2 text-info" id="navbardropdown1">
                   <LinkContainer to='/necklaces'>
                     <NavDropdown.Item className="jumboH5 text-info">Necklaces</NavDropdown.Item>
