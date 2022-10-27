@@ -26,11 +26,14 @@ const PlaceOrderScreen = ({history}) => {
 	cart.itemsPrice = addDecimals(
 		cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
 	);
-	// cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 5);
+	
+	cart.shippingPrice = addDecimals(cart.itemsPrice > 10 ? 0 : 1);
+	// cart.shippingPrice = addDecimals(cart.itemsPrice === 0);
+
 	cart.taxPrice = addDecimals(Number((0.08 * cart.itemsPrice).toFixed(2)));
 	cart.totalPrice = (
 		Number(cart.itemsPrice) +
-		// Number(cart.shippingPrice) +
+		Number(cart.shippingPrice) +
 		Number(cart.taxPrice)
 	).toFixed(2);
 
@@ -50,10 +53,10 @@ const PlaceOrderScreen = ({history}) => {
 		dispatch(
 			createOrder({
 				orderItems: cart.cartItems,
-				// shippingAddress: cart.shippingAddress,
+				shippingAddress: cart.shippingAddress,
 				paymentMethod: cart.paymentMethod,
 				itemsPrice: cart.itemsPrice,
-				// shippingPrice: cart.shippingPrice,
+				shippingPrice: cart.shippingPrice,
 				taxPrice: cart.taxPrice,
 				totalPrice: cart.totalPrice
 			})

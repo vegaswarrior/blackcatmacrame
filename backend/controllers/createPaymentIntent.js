@@ -27,11 +27,14 @@ const calculateOrderAmount = async (items) => {
 	const itemsPrice = addDecimals(
 		itemsWithPrice.reduce((acc, item) => acc + item.price * item.quantity, 0)
 	);
-	// const shippingPrice = addDecimals(itemsPrice > 100 ? 0 : 5);
+	// const shippingPrice = addDecimals(itemsPrice === 0);
+	const shippingPrice = addDecimals(itemsPrice > 10 ? 0 : 5);
+	
+
 	const taxPrice = addDecimals(Number((0.08 * itemsPrice).toFixed(2)));
 	const totalPrice = (
 		Number(itemsPrice) +
-		// Number(shippingPrice) +
+		Number(shippingPrice) +
 		Number(taxPrice)
 	).toFixed(2);
 

@@ -183,8 +183,8 @@ const OrderScreen = ({match, history}) => {
 							<ListGroup.Item>
 								<Row>
 									<Col>Shipping</Col>
-									<Col style={{color: "red"}}><strong>Free Shipping</strong></Col>
-									{/* <Col>${order.shippingPrice}</Col> */}
+									{/* <Col style={{color: "red"}}><strong>Free Shipping</strong></Col> */}
+									<Col>${order.shippingPrice}</Col>
 								</Row>
 							</ListGroup.Item>
 							<ListGroup.Item>
