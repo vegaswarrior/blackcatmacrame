@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col} from 'react-bootstrap';
 import {LinkContainer} from "react-router-bootstrap";
+import logo from '../components/blackcatlogo2.jpg';
 
 const Footer = () => {
   return (
@@ -27,7 +28,7 @@ const Footer = () => {
             </ul>
           </Col>
            <Col>
-               <h1 className='text-center text-info'>This is where the center image will be....</h1>
+               <h1 className='text-center text-info'><img src={logo}></img></h1>
            </Col>
           <Col className='text-center py-3 text-info'>
             <ul className='list-unstyled'>
