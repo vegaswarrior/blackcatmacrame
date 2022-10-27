@@ -41,6 +41,11 @@
     animation-name: moveInRight;
     animation-duration: 2s;
 }
+.jumboH5 {
+    font-family: 'Birthstone', cursive;
+    font-size: 20px;
+}
+
   /* FIRST BUTTON  */
 #first_button{
     align-self: center;

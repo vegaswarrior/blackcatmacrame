@@ -22,21 +22,17 @@ const Header = () => {
 
 	return (
 		<header>
-			<Navbar
-				className="navbar1 d-flex justify-content-center"
-				variant="dark"
-				expand="lg"
-				collapseOnSelect
-			>
-				<Container>
-
-				<Navbar.Toggle aria-controls="basic-navbar-nav" />
-				         <LinkContainer to="/">
+      <Navbar  variant='dark' expand='lg' className='navbar1'>
+        <Container className='navbar_container'>
+           <LinkContainer to="/">
 							<Navbar.Brand className="jumboH2 text-info"><img className="logo1" src={Logo} alt="blackcatlogo"></img></Navbar.Brand>
 						</LinkContainer>
-					<Navbar.Collapse id="basic-navbar-nav">
-						<LinkContainer to="/">
-							<Navbar.Brand className="jumboH2 text-info">Home</Navbar.Brand>
+          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+          <Navbar.Collapse id='basic-navbar-nav'>
+            {/* <Route render={({ history }) => <SearchBox history={history} />} /> */}
+            <Nav className="me-auto">
+            <LinkContainer to="/">
+							<Navbar.Brand className="jumboH2 text-info ">Home</Navbar.Brand>
 						</LinkContainer>
 						<LinkContainer to="/story">
 							<Navbar.Brand className="jumboH2 text-info">My Story</Navbar.Brand>
@@ -44,75 +40,53 @@ const Header = () => {
 						<LinkContainer to="/contact">
 							<Navbar.Brand className="jumboH2 text-info">Contact Me</Navbar.Brand>
 						</LinkContainer>
-						<li className="nav-item dropdown list-unstyled">
-							<a className="nav-link dropdown-toggle jumboH2 text-info" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Categories
-							</a>
-							<ul className="dropdown-menu">
-								<LinkContainer to="/necklaces">
-									<li><a className="dropdown-item">Necklaces</a></li>
-								</LinkContainer>
-								<LinkContainer to="/bracelets">
-									<li><a className="dropdown-item">Bracelets</a></li>
-								</LinkContainer>
-								<LinkContainer to="/pendants">
-									<li><a className="dropdown-item">Pendant Necklaces</a></li>
-								</LinkContainer>
-								<LinkContainer to="/chokers">
-									<li><a className="dropdown-item">Choker Necklace</a></li>
-								</LinkContainer>
-								<LinkContainer to="/statementpieces">
-									<li><a className="dropdown-item">Statement Pieces and Sets</a></li>
-								</LinkContainer>
-								<LinkContainer to="/miscellaneous">
-									<li><a className="dropdown-item">Miscellaneous</a></li>
-								</LinkContainer>
-							</ul>
-						</li>
-
-                        <Route render={({ history }) => <SearchBox history={history} />} />
-						<Nav className="ml-auto">
-							<LinkContainer to="/cart">
-								<Nav.Link>
-									<i className="fas fa-shopping-cart text-info"></i> Cart
-								</Nav.Link>
-							</LinkContainer>
-				
-							{userInfo ? (
-								<div className="d-lg-flex justify-content-start ms-lg-5">
-									<Avatar size="40px" url={userInfo.avatar} className="" />
-									<NavDropdown title={userInfo.name} id="username">
-										<LinkContainer to="/profile">
-											<NavDropdown.Item>Profile</NavDropdown.Item>
-										</LinkContainer>
-										<NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
-									</NavDropdown>
-								</div>
-							) : (
-								<LinkContainer to="/login">
-									<Nav.Link>
-										<i className="fas fa-user"></i> Sign In
-									</Nav.Link>
-								</LinkContainer>
-							)}
-							{userInfo && userInfo.isAdmin && (
-								<NavDropdown title="Admin" id="adminmenu">
-									<LinkContainer to="/admin/userlist">
-										<NavDropdown.Item>Users</NavDropdown.Item>
-									</LinkContainer>
-									<LinkContainer to="/admin/productlist">
-										<NavDropdown.Item>Products</NavDropdown.Item>
-									</LinkContainer>
-									<LinkContainer to="/admin/orderlist">
-										<NavDropdown.Item>Orders</NavDropdown.Item>
-									</LinkContainer>
-								</NavDropdown>
-							)}
-						</Nav>
-					</Navbar.Collapse>
-				</Container>
-
-			</Navbar>
+                      <NavDropdown title="Products" className="jumboH2 text-info">
+							<NavDropdown.Item Link to="/necklaces" className="jumboH5 text-info">Necklace</NavDropdown.Item>
+							<NavDropdown.Item Link to="/bracelets" className="jumboH5 text-info">Bracelets</NavDropdown.Item>
+							<NavDropdown.Item Link to="/pendants" className="jumboH5 text-info">Pendant Necklaces</NavDropdown.Item>
+							<NavDropdown.Item Link to="/chokers" className="jumboH5 text-info">Choker Necklace</NavDropdown.Item>
+							<NavDropdown.Item Link to="/statementpieces" className="jumboH5 text-info">Statement Pieces and Sets</NavDropdown.Item>
+							<NavDropdown.Item Link to="/miscellaneous" className="jumboH5 text-info">Miscellaneous</NavDropdown.Item>
+						</NavDropdown>
+          </Nav>
+            <Nav className='ml-auto'>
+              <LinkContainer to='/cart'>
+                <Nav.Link><i className='fas fa-shopping-cart'></i> Cart </Nav.Link>
+              </LinkContainer>
+              <Avatar size="40px" url={userInfo.avatar} className="" />
+              {userInfo ? (
+                <NavDropdown title={userInfo.name} id='username'>
+                  <LinkContainer to='/profile'>
+                    <NavDropdown.Item>Profile</NavDropdown.Item>
+                  </LinkContainer>
+                  <NavDropdown.Item onClick={logoutHandler}>
+                    Logout
+                  </NavDropdown.Item>
+                </NavDropdown>
+              ) : (
+                <LinkContainer to='/login'>
+                  <Nav.Link>
+                    <i className='fas fa-user'></i> Sign In
+                  </Nav.Link>
+                </LinkContainer>
+              )}
+              {userInfo && userInfo.isAdmin && (
+                <NavDropdown title='Admin' id='adminmenu'>
+                  <LinkContainer to='/admin/userlist'>
+                    <NavDropdown.Item>Users</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/admin/productlist'>
+                    <NavDropdown.Item>Products</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/admin/orderlist'>
+                    <NavDropdown.Item>Orders</NavDropdown.Item>
+                  </LinkContainer>
+                </NavDropdown>
+              )}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 		</header>
 	);
 };
