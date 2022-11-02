@@ -8,9 +8,9 @@ import Paginate from "./Paginate";
 import { listProducts } from "../actions/productActions";
 import Meta from "./Meta";
 
-const Pendants = ({match}) => {
+const Trees = ({match}) => {
   const keyword = match.params.keyword;
-  const category = "Pendants";
+  const category = "Trees";
 
   const pageNumber = match.params.pageNumber || 1;
 
@@ -26,7 +26,7 @@ const Pendants = ({match}) => {
   return (
     <Container fluid className="featured_products_container">
       <Meta />
-      <h1 className="latest_products text-center">Pendants</h1>
+      <h1 className="latest_products text-center">Trees</h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -44,4 +44,4 @@ const Pendants = ({match}) => {
     </Container>)
 }
 
-export default Pendants
+export default Trees

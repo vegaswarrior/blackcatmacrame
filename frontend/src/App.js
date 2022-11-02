@@ -25,8 +25,9 @@ import Collections from './components/Collections'
 import Contact from './components/Contact'
 import Necklaces from './components/Necklaces'
 import Bracelets from './components/Bracelets'
+import Trees from './components/Trees'
+import Jewelry from './components/Jewelry'
 import Pendants from './components/Pendants'
-import Chokers from './components/Chokers'
 import StatementPieces from './components/StatementPieces'
 import Miscellaneous from './components/Miscellaneous'
 
@@ -70,7 +71,8 @@ const App = () => {
           <Route path='/necklaces' component={Necklaces} />
           <Route path='/bracelets' component={Bracelets} />
           <Route path='/pendants' component={Pendants} />
-          <Route path='/chokers' component={Chokers} />
+          <Route path='/trees' component={Trees} />
+          <Route path='/jewelry' component={Jewelry} />
           <Route path='/statementpieces' component={StatementPieces} />
           <Route path='/miscellaneous' component={Miscellaneous} />
           <Route path='/contact' component={Contact} />
