@@ -45,6 +45,7 @@ const HomeScreen = ({match}) => {
 			<Container fluid className="featured_products_container">
 				<Meta />
 				<h1 className="latest_products text-center">Latest Products</h1>
+		
 				{loading ? (
 					<Loader />
 				) : error ? (

@@ -8,6 +8,7 @@ const Footer = () => {
     <footer>
       <Container fluid className='footer_container'> 
         <Row>
+          
           <Col className='text-center py-3 text-info mr-4'>
           <ul className='list-unstyled'>
             <LinkContainer to="/">
@@ -22,7 +23,7 @@ const Footer = () => {
             <LinkContainer to="contact">
                 <li><button className='footerButtons'>Contact Me</button></li>
              </LinkContainer>
-             
+
   
 
             </ul>
