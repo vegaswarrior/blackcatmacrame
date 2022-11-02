@@ -72,7 +72,7 @@ const App = () => {
           <Route path='/Bracelets' component={Bracelets} />
           <Route path='/Pendants' component={Pendants} />
           <Route path='/Trees' component={Trees} />
-          <Route path='/jewelry' component={Jewelry} />
+          <Route path='/Jewelry' component={Jewelry} />
           <Route path='/StatementPieces' component={StatementPieces} />
           <Route path='/Miscellaneous' component={Miscellaneous} />
           <Route path='/contact' component={Contact} />
