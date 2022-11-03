@@ -12,7 +12,7 @@ const Necklaces = ({match}) => {
   const keyword = match.params.keyword;
   const category = "Necklaces";
 
-  const pageNumber = match.params.pageNumber || 1 || 2 || 3;
+  const pageNumber = match.params.pageNumber || 1;
 
   const dispatch = useDispatch();
 
