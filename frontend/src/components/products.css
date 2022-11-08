@@ -219,3 +219,8 @@
     transform: translateX(0);
     }
  }
+ .greetings {
+    font-weight: bold;
+    font-size: 20px;
+
+ }
