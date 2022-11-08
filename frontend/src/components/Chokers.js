@@ -39,7 +39,7 @@ const Chokers = ({match}) => {
             </Col>
           ))}
         </Row>
-        <Paginate pages={pages} page={page} keyword={keyword ? keyword : ""} />
+        <Paginate pages={pages} page={page} category={category} keyword={keyword ? keyword : ""} />
       </Container>)}
     </Container>)
 }

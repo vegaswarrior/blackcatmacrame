@@ -10,6 +10,10 @@ import "../screens/homescreen.css";
 import Avatar from "./Avatar";
 import Logo from './blackcatlogo2.jpg'
 
+
+
+// document.getElementById("shopping_cart_icon");
+
 const Header = () => {
 	const dispatch = useDispatch();
 
@@ -41,37 +45,31 @@ const Header = () => {
 				<Navbar.Brand className="jumboH2 text-info">Contact Me</Navbar.Brand>
 			</LinkContainer>
                   <NavDropdown title="Products" className="jumboH2 text-info" id="navbardropdown1">
-                  <LinkContainer to='/Necklaces'>
+                  <LinkContainer to='/Necklaces/1'>
                     <NavDropdown.Item className="jumboH5 text-info">Necklaces</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/Bracelets'>
+                  <LinkContainer to='/Bracelets/1'>
                     <NavDropdown.Item className="jumboH5 text-info">Bracelets</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/Pendants'>
+                  <LinkContainer to='/Pendants/1'>
                     <NavDropdown.Item className="jumboH5 text-info">Pendants</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/Statementpieces'>
+                  <LinkContainer to='/Statementpieces/1'>
                     <NavDropdown.Item className="jumboH5 text-info">Statement Pieces</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/jewelry'>
+                  <LinkContainer to='/jewelry/1'>
                     <NavDropdown.Item className="jumboH5 text-info">Jewelry Sets</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/Trees'>
+                  <LinkContainer to='/Trees/1'>
                     <NavDropdown.Item className="jumboH5 text-info">Trees</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/Miscellaneous'>
+                  <LinkContainer to='/Miscellaneous/1'>
                     <NavDropdown.Item className="jumboH5 text-info">Miscellaneous</NavDropdown.Item>
                   </LinkContainer>
 
                 </NavDropdown>
           </Nav>
           <Nav className="ml-auto">
-							<LinkContainer to="/cart">
-								<Nav.Link>
-									<i className="fas fa-shopping-cart text-info"></i> Cart
-								</Nav.Link>
-							</LinkContainer>
-				
 							{userInfo ? (
 								<div className="d-lg-flex justify-content-start ms-lg-5">
 									<Avatar size="40px" url={userInfo.avatar} className="" />
@@ -101,7 +99,13 @@ const Header = () => {
 										<NavDropdown.Item>Orders</NavDropdown.Item>
 									</LinkContainer>
 								</NavDropdown>
+								
 							)}
+							<LinkContainer to="/cart">
+								<Nav.Link>
+									<i className="fas fa-shopping-cart text-info" id="shopping_cart_icon"></i>
+								</Nav.Link>
+							</LinkContainer>
 						</Nav>
           </Navbar.Collapse>
         </Container>

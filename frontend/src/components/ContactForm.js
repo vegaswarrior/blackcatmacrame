@@ -9,7 +9,7 @@ function ContactForm() {
 
     <Container className='form_container'>
       <Row>
-          <Form  action="https://formspree.io/f/xoqbakor" method="POST"  className='form_1'>
+        <Form  action="https://formspree.io/f/xoqbakor" method="POST"  className='form_1' id="contact-form">
           <Form.Group className="mb-3" controlId="formBasicPassword">
               {/* <Form.Label>Name</Form.Label> */}
               <Form.Control  className="inputFields"  name="firstName" placeholder="Enter Name" />
@@ -32,7 +32,7 @@ function ContactForm() {
               {/* <Form.Label>Message</Form.Label> */}
               <Form.Control  className="messageInput" name="message" placeholder="Enter Message Here!" />
             </Form.Group>
-            <Button variant="primary" type="submit" className='mb-5'>
+            <Button variant="primary" type="submit" className='mb-5' id="submit_button">
               Submit
             </Button>
           </Form>

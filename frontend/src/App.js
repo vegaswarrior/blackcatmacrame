@@ -68,13 +68,13 @@ const App = () => {
           
            </Container>
           <Route path='/' component={HomeScreen} exact />
-          <Route path='/Necklaces' component={Necklaces} />
-          <Route path='/Bracelets' component={Bracelets} />
-          <Route path='/Pendants' component={Pendants} />
-          <Route path='/Trees' component={Trees} />
-          <Route path='/Jewelry' component={Jewelry} />
-          <Route path='/StatementPieces' component={StatementPieces} />
-          <Route path='/Miscellaneous' component={Miscellaneous} />
+          <Route path='/Necklaces/:pageNumber' component={Necklaces} />
+          <Route path='/Bracelets/:pageNumber' component={Bracelets} />
+          <Route path='/Pendants/:pageNumber' component={Pendants} />
+          <Route path='/Trees/:pageNumber' component={Trees} />
+          <Route path='/Jewelry/:pageNumber' component={Jewelry} />
+          <Route path='/StatementPieces/:pageNumber' component={StatementPieces} />
+          <Route path='/Miscellaneous/:pageNumber' component={Miscellaneous} />
           <Route path='/contact' component={Contact} />
           <Route path='/story' component={Story} />
 

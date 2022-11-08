@@ -277,3 +277,10 @@ to{
   transform: translateY(4rem);
 }
 } */
+
+
+#shopping_cart_icon{
+ font-size: 20px;
+ margin-left: 10px;
+ /* display: none; */
+}
