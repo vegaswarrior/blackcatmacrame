@@ -27,7 +27,7 @@ const calculateOrderAmount = async (items) => {
 	const itemsPrice = addDecimals(
 		itemsWithPrice.reduce((acc, item) => acc + item.price * item.quantity, 0)
 	);
-	// const shippingPrice = addDecimals(itemsPrice === 0);
+	
 	const shippingPrice = addDecimals(itemsPrice > 10 ? 0 : 5);
 	
 
