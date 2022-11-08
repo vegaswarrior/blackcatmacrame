@@ -41,25 +41,25 @@ const Header = () => {
 				<Navbar.Brand className="jumboH2 text-info">Contact Me</Navbar.Brand>
 			</LinkContainer>
                   <NavDropdown title="Products" className="jumboH2 text-info" id="navbardropdown1">
-                  <LinkContainer to='/Necklaces'>
+                  <LinkContainer to='/Necklaces/1'>
                     <NavDropdown.Item className="jumboH5 text-info">Necklaces</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/Bracelets'>
+                  <LinkContainer to='/Bracelets/1'>
                     <NavDropdown.Item className="jumboH5 text-info">Bracelets</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/Pendants'>
+                  <LinkContainer to='/Pendants/1'>
                     <NavDropdown.Item className="jumboH5 text-info">Pendants</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/Statementpieces'>
+                  <LinkContainer to='/Statementpieces/1'>
                     <NavDropdown.Item className="jumboH5 text-info">Statement Pieces</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/jewelry'>
+                  <LinkContainer to='/jewelry/1'>
                     <NavDropdown.Item className="jumboH5 text-info">Jewelry Sets</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/Trees'>
+                  <LinkContainer to='/Trees/1'>
                     <NavDropdown.Item className="jumboH5 text-info">Trees</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/Miscellaneous'>
+                  <LinkContainer to='/Miscellaneous/1'>
                     <NavDropdown.Item className="jumboH5 text-info">Miscellaneous</NavDropdown.Item>
                   </LinkContainer>
 

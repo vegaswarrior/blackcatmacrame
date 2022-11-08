@@ -61,27 +61,25 @@ const App = () => {
           <Route path='/admin/product/:id/edit' component={ProductEditScreen} />
           <Route path='/admin/orderlist' component={OrderListScreen} />
           <Route path='/search/:keyword' component={HomeScreen} exact />
-          <Route path='/page/:pageNumber' component={HomeScreen} exact />
-          <Route path='/search/:keyword/page/:pageNumber' component={HomeScreen} exact />
+        </Container>
+
+        <Route path='/search/:keyword/page/:pageNumber' component={HomeScreen} exact />
+        <Route path='/page/:pageNumber' component={HomeScreen} exact />
+        <Route path='/' component={HomeScreen} exact />
+        <Route path='/Necklaces/:pageNumber' component={Necklaces} />
+        <Route path='/Bracelets/:pageNumber' component={Bracelets} />
+        <Route path='/Pendants/:pageNumber' component={Pendants} />
+        <Route path='/Trees/:pageNumber' component={Trees} />
+        <Route path='/Jewelry/:pageNumber' component={Jewelry} />
+        <Route path='/StatementPieces/:pageNumber' component={StatementPieces} />
+        <Route path='/Miscellaneous/:pageNumber' component={Miscellaneous} />
+        <Route path='/contact' component={Contact} />
+        <Route path='/story' component={Story} />
 
 
-          
-           </Container>
-          <Route path='/' component={HomeScreen} exact />
-          <Route path='/Necklaces' component={Necklaces} />
-          <Route path='/Bracelets' component={Bracelets} />
-          <Route path='/Pendants' component={Pendants} />
-          <Route path='/Trees' component={Trees} />
-          <Route path='/Jewelry' component={Jewelry} />
-          <Route path='/StatementPieces' component={StatementPieces} />
-          <Route path='/Miscellaneous' component={Miscellaneous} />
-          <Route path='/contact' component={Contact} />
-          <Route path='/story' component={Story} />
 
 
-         
-          
-       
+
       </main>
       <Footer />
     </Router>
